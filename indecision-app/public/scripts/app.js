@@ -1,12 +1,18 @@
 "use strict";
 
+Assignment:
+// only render the subtitle (and p tag)  if subtitle exist (logical and operator) 
+// options
+// render new p tag - if options.length > 0 "Here are your options" if not "No options" 
+
 // if statements
 
 // JSX - Javascript XML 
 
 var app = {
     title: "Indecision App",
-    Subtitle: "Put your life in the hands of a computer"
+    Subtitle: "Put your life in the hands of a computer",
+    options: ['One', 'Two']
 };
 
 var template = React.createElement(
@@ -18,10 +24,16 @@ var template = React.createElement(
         app.title,
         " "
     ),
-    React.createElement(
+    app.subtitle && React.createElement(
         "p",
         null,
         app.subtitle
+    ),
+    React.createElement(
+        "p",
+        null,
+        app.options.length > 0 ? 'Here are your options' : 'No options',
+        " "
     ),
     React.createElement(
         "ol",
@@ -40,6 +52,7 @@ var template = React.createElement(
 );
 
 var user = {
+    name: "Larry",
     age: 23,
     location: "Pittsburgh"
 };
@@ -76,4 +89,4 @@ var template2 = React.createElement(
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template2, appRoot);
+ReactDOM.render(template, appRoot);
