@@ -1,16 +1,32 @@
+Assignment: 
+// only render the subtitle (and p tag)  if subtitle exist (logical and operator) 
+// options
+// render new p tag - if options.length > 0 "Here are your options" if not "No options" 
 
 // if statements
+
 // JSX - Javascript XML 
 
+var app = {
+    title: "Indecision App", 
+    Subtitle: "Put your life in the hands of a computer" 
+    options: ['One', 'Two'] 
+}; 
 
 var template = (
    <div> 
-        <h1> Indecision App </h1>
-        <p> This is some info </p>
+        <h1>{app.title} </h1>
+        <p>{app.subtitle}</p>
+
+        <ol>
+            <li>Item one</li>
+            <li>Item two</li>
+        </ol>
     </div>
-)
+);
 
 var user = {
+    name: "Larry",
     age: 23,
     location: "Pittsburgh"
 } 
