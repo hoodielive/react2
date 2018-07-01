@@ -1,49 +1,57 @@
-"use strict";
+'use strict';
 
-//JSX - Javascript XML 
+// if statements
+// JSX - Javascript XML 
+
+
 var template = React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-        "h1",
+        'h1',
         null,
-        " Indecision App "
+        ' Indecision App '
     ),
     React.createElement(
-        "p",
+        'p',
         null,
-        " This is some info "
+        ' This is some info '
     )
 );
 
 var user = {
-    name: "Larry",
     age: 23,
     location: "Pittsburgh"
 };
 
+function getLocation(location) {
+    if (location) {
+        return React.createElement(
+            'p',
+            null,
+            ' Location: ',
+            location,
+            ' '
+        );
+    }
+}
+
 var template2 = React.createElement(
-    "div",
+    'div',
     null,
     React.createElement(
-        "h1",
+        'h1',
         null,
-        user.name
+        user.name ? user.name : 'Anonymous'
     ),
-    React.createElement(
-        "p",
+    user.age && user.age >= 18 && React.createElement(
+        'p',
         null,
-        " Age: ",
+        ' Age: ',
         user.age,
-        " "
+        ' '
     ),
-    React.createElement(
-        "p",
-        null,
-        " Location: ",
-        user.location,
-        " "
-    )
+    getLocation(user.location)
 );
 
 var appRoot = document.getElementById('app');
