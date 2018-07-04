@@ -2,11 +2,11 @@ const user = {
     name: "Larry Hollywood",
     cities: ['Philadelphia', 'New York', 'Dublin'], 
     printPlacesLived() {
-        //const that = this; this is a workaround and will work 
-        this.cities.forEach((city) => {
-            console.log(this.name + ' has lived in ' + city) 
+        return this.cities.map((city) => {
+            return this.name + ' has live in ' + city; 
         }); 
+       
     }
 }
 
-user.printPlacesLived(); 
+console.log(user.printPlacesLived()); 
