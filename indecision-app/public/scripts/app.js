@@ -21,8 +21,7 @@ var template = React.createElement(
     React.createElement(
         "h1",
         null,
-        app.title,
-        " "
+        app.title
     ),
     app.subtitle && React.createElement(
         "p",

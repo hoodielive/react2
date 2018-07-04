@@ -7,13 +7,13 @@ Assignment:
 
 // JSX - Javascript XML 
 
-var app = {
+const app = {
     title: "Indecision App", 
     Subtitle: "Put your life in the hands of a computer",
     options: ['One', 'Two'],
 }; 
 
-var template = (
+const template = (
    <div> 
         <h1>{app.title}</h1>
         {app.subtitle && <p>{app.subtitle}</p>}     
@@ -26,7 +26,7 @@ var template = (
     </div>
 );
 
-var user = {
+const user = {
     name: "Larry",
     age: 23,
     location: "Pittsburgh"
@@ -38,7 +38,7 @@ function getLocation(location) {
     }
 } 
 
-var template2 = (
+const template2 = (
     <div>
         <h1>{user.name ? user.name : 'Anonymous'}</h1>
         {(user.age && user.age >= 18) && <p> Age: {user.age} </p>}
@@ -46,6 +46,6 @@ var template2 = (
     </div>
 ); 
 
-var appRoot = document.getElementById('app'); 
+const appRoot = document.getElementById('app'); 
 
 ReactDOM.render(template, appRoot); 
