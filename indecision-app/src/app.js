@@ -1,11 +1,4 @@
 Assignment: 
-// only render the subtitle (and p tag)  if subtitle exist (logical and operator) 
-// options
-// render new p tag - if options.length > 0 "Here are your options" if not "No options" 
-
-// if statements
-
-// JSX - Javascript XML 
 
 const app = {
     title: "Indecision App", 
@@ -26,26 +19,34 @@ const template = (
     </div>
 );
 
-const user = {
-    name: "Larry",
-    age: 23,
-    location: "Pittsburgh"
-} 
+let count = 0; 
+const addOne = () => {
+    console.log('addOne')
+};
 
-function getLocation(location) { 
-    if(location) {
-        return <p> Location: {location} </p>;
-    }
-} 
+const minusOne = () => {
+    console.log('minusOne');
+}; 
 
-const template2 = (
+const reset = () => {
+    console.log('reset');
+}
+
+const templateTwo = (
     <div>
-        <h1>{user.name ? user.name : 'Anonymous'}</h1>
-        {(user.age && user.age >= 18) && <p> Age: {user.age} </p>}
-        {getLocation(user.location)} 
+        <h1>Count: {count}</h1>
+        <button onClick={addOne}> +1 </button>
     </div>
 ); 
 
+const templateThree = (
+    <div>
+        <h1> MinusOne: {count} </h1> 
+        <button onClick={minusOne}>-1</button> 
+        <h1> Reset: {count} </h1>
+        <button onClick={reset}>0</button> 
+    </div>
+)
 const appRoot = document.getElementById('app'); 
 
-ReactDOM.render(template, appRoot); 
+ReactDOM.render(templateThree, appRoot); 
