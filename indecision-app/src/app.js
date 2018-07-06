@@ -26,12 +26,14 @@ const addOne = () => {
 };
 
 const minusOne = () => {
-    console.log('minusOne');
+    count--;
+    renderCounterApp(); 
 }; 
 
 const reset = () => {
-    console.log('reset');
-}
+    count = 0; 
+    renderCounterApp();
+};
 
 const templateThree = (
     <div>
@@ -40,7 +42,7 @@ const templateThree = (
         <h1> Reset: {count} </h1>
         <button onClick={reset}>0</button> 
     </div>
-)
+);
 const appRoot = document.getElementById('app'); 
 
 const renderCounterApp = () => {
