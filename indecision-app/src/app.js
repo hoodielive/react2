@@ -2,7 +2,7 @@
 const app = {
     title: "Indecision App", 
     Subtitle: "Put your life in the hands of a computer",
-    options: [],
+    options: ["1", "2"],
 }; 
 
 const removeAll = (f) => {
