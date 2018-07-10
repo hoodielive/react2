@@ -3,7 +3,7 @@
 var app = {
     title: "Indecision App",
     Subtitle: "Put your life in the hands of a computer",
-    options: []
+    options: ["1", "2"]
 };
 
 var removeAll = function removeAll(f) {
@@ -24,6 +24,8 @@ var onFormSubmit = function onFormSubmit(e) {
 };
 
 var appRoot = document.getElementById('app');
+
+var numbers = [55, 101, 1000];
 
 var render = function render() {
     var template = React.createElement(
@@ -55,6 +57,9 @@ var render = function render() {
             { onClick: removeAll },
             "Remove All"
         ),
+        numbers.map(function (number) {
+            return number * 2;
+        }),
         React.createElement(
             "ol",
             null,
