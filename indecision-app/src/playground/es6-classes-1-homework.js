@@ -8,8 +8,22 @@ class Person {
     }
 }
 
+class Student extends Person {
+   constructor(name, age, major) {
+       super(name, age); 
+       this.major = major; 
+   }
+    hasMajor() {
+        
+    }
+}
+
 const daPerson = new Person('Larry', 27); 
-console.log(daPerson.getDescription()); 
+console.log(daPerson); 
 
 const anony = new Person(); 
-console.log(anony.getDescription()); 
+console.log(anony); 
+
+const new_student = new Student('Larry', 27, 'Computer Science'); 
+console.log(new_student);
+
