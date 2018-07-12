@@ -10,3 +10,6 @@ class Person {
 
 const daPerson = new Person('Larry', 27); 
 console.log(daPerson.getDescription()); 
+
+const anony = new Person(); 
+console.log(anony.getDescription()); 
