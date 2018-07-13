@@ -14,16 +14,42 @@ class Student extends Person {
        this.major = major; 
    }
     hasMajor() {
-        
+        return !!this.major;         
+    }
+    getDescription() {
+        let description = super.getDescription(); 
+
+        if (this.hasMajor) {
+            description += `Their major is ${this.major}`; 
+        } 
+        return description; 
+    } 
+}
+
+class Traveler extends Person {
+    constructor(name, myLocation) {
+        super(name); 
+        this.myLocation = myLocation; 
+    }
+    hasLocation() {
+        return !!this.myLocation; 
+    }
+
+    getDescription() { 
+        let description = super.getDescription(); 
+
+        if (this.hasLocation) { 
+            description = ` Hi. I am ${this.name}. Im visiting from ${this.myLocation}`
+        }
+        return description; 
     }
 }
 
 const daPerson = new Person('Larry', 27); 
 console.log(daPerson); 
 
-const anony = new Person(); 
-console.log(anony); 
-
 const new_student = new Student('Larry', 27, 'Computer Science'); 
-console.log(new_student);
+console.log(new_student.getDescription());
 
+const theTraveler = new Traveler('Larry', 'Philly'); 
+console.log(theTraveler.getDescription()); 
