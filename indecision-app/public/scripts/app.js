@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -18,12 +18,14 @@ var IndecisionApp = function (_React$Component) {
     }
 
     _createClass(IndecisionApp, [{
-        key: "render",
+        key: 'render',
         value: function render() {
+            var title = 'Indecision';
+            var subtitle = "!!Put Your Life in the hands of a computer";
             return React.createElement(
-                "div",
+                'div',
                 null,
-                React.createElement(Header, { title: "Test value" }),
+                React.createElement(Header, { title: title, subtitle: subtitle }),
                 React.createElement(Action, null),
                 React.createElement(Options, null),
                 React.createElement(AddOption, null)
@@ -44,21 +46,21 @@ var Header = function (_React$Component2) {
     }
 
     _createClass(Header, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             console.log(this.props);
             return React.createElement(
-                "div",
+                'div',
                 null,
                 React.createElement(
-                    "h1",
+                    'h1',
                     null,
-                    "Indecision"
+                    this.props.title
                 ),
                 React.createElement(
-                    "h2",
+                    'h2',
                     null,
-                    "Put your life in the hands of a computer"
+                    this.props.subtitle
                 )
             );
         }
@@ -77,15 +79,15 @@ var Action = function (_React$Component3) {
     }
 
     _createClass(Action, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             return React.createElement(
-                "div",
+                'div',
                 null,
                 React.createElement(
-                    "button",
+                    'button',
                     null,
-                    "What should I do?"
+                    'What should I do?'
                 )
             );
         }
@@ -104,10 +106,10 @@ var Options = function (_React$Component4) {
     }
 
     _createClass(Options, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             return React.createElement(
-                "div",
+                'div',
                 null,
                 React.createElement(Option, null)
             );
@@ -127,12 +129,12 @@ var Option = function (_React$Component5) {
     }
 
     _createClass(Option, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             return React.createElement(
-                "div",
+                'div',
                 null,
-                "Option Returned"
+                'Option Returned'
             );
         }
     }]);
@@ -150,15 +152,15 @@ var AddOption = function (_React$Component6) {
     }
 
     _createClass(AddOption, [{
-        key: "render",
+        key: 'render',
         value: function render() {
             return React.createElement(
-                "div",
+                'div',
                 null,
                 React.createElement(
-                    "p",
+                    'p',
                     null,
-                    "I am static content"
+                    'I am static content'
                 )
             );
         }
