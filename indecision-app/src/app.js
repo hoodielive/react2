@@ -18,11 +18,33 @@ class Action extends React.Component {
         );
     }
 }
-const jsx = { 
-    <div>
+
+class Options extends React.Component {
+    render() { 
+        return (
+            <div>
+
+            </div>
+        )
+    }
+}
+
+class AddOption extends React.Component {
+    render() {
+        return (
+            <div>
+
+            </div>
+        );
+    }
+}
+
+const jsx = (
+    <div> 
     <Header />
     <Action />
     </div>
-}
+  );
+
 
 ReactDOM.render(jsx, document.getElementById('app'));
